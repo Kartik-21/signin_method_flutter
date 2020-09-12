@@ -28,6 +28,8 @@ dependencies:
   splashscreen: 1.2.0
   flutter_signin_button: ^1.0.0
   http: any
+  google_sign_in: ^4.1.1
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -65,7 +67,15 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Regular.ttf
+    - family: NunitoSans
+      fonts:
+        - asset: fonts/NunitoSans-Regular.ttf
+
+
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

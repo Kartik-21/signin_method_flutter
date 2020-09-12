@@ -29,13 +29,17 @@ class _EmailLogInState extends State<EmailLogIn> {
                 key: _formKey,
                 child: SingleChildScrollView(
                     child: Column(children: <Widget>[
+                  SizedBox(
+                    height: 20.0,
+                  ),
                   Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(5.0),
                     child: TextFormField(
                       controller: emailController,
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         labelText: "Enter User Email",
-                        enabledBorder: OutlineInputBorder(
+                        border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
@@ -49,12 +53,13 @@ class _EmailLogInState extends State<EmailLogIn> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(5.0),
                     child: TextFormField(
                       controller: passwordController,
+                      keyboardType: TextInputType.visiblePassword,
                       decoration: InputDecoration(
                         labelText: "Enter User Password",
-                        enabledBorder: OutlineInputBorder(
+                        border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
@@ -68,12 +73,13 @@ class _EmailLogInState extends State<EmailLogIn> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(20.0),
+                    padding: EdgeInsets.all(5.0),
                     child: TextFormField(
+                      keyboardType: TextInputType.text,
                       controller: nameController,
                       decoration: InputDecoration(
                         labelText: "Enter User name",
-                        enabledBorder: OutlineInputBorder(
+                        border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                       ),
@@ -120,5 +126,6 @@ class _EmailLogInState extends State<EmailLogIn> {
       debugPrint(err);
       debugPrint("Error");
     });
+    return firebaseAuth;
   }
 }
